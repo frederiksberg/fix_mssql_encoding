@@ -27,9 +27,9 @@ from optparse import OptionParser # optparse-modulet bruges til at tage imod
 
 # OptParse-opsætning - Defaults er sat op til vores database på Frederiksberg.
 parser = OptionParser(usage="usage: %prog [options] tabelnavn")
-parser.add_option("-S", "--server", dest="server", default="dbgis\dbgis", help="Database-server")
+parser.add_option("-S", "--server", dest="server", default="", help="Database-server")
 parser.add_option("-s", "--schema", dest="schema", default="dbo", help="Schemaet, hvor tabellen ligger i")
-parser.add_option("-d", "--database", dest="database", default="frbgis", help="Navn paa databasen")
+parser.add_option("-d", "--database", dest="database", default="", help="Navn paa databasen")
 parser.add_option("-a", "--auth", dest="auth", default="trusted_connection", help="Autentisering til databasen")
 parser.add_option("-q", "--quiet", dest="quiet", action="store_true", default=False, help="Vis ikke output (bortset fra fejl)")
 (options, args) = parser.parse_args()
